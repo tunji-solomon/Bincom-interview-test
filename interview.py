@@ -22,8 +22,9 @@ mean_color = round(sum_of_colors/len(shirts))
 for k,v in shirts.items():
   if mean_color == v:
     print(k)
-
 #answer => mean color is ORANGE and RED
+
+
 
 #question 2 
 highest = 0
@@ -33,8 +34,9 @@ for k,v in shirts.items():
 for k,v in shirts.items():
   if highest == v:
     print(k)
-
 #The color mostly worn is BLUE
+
+
 
 #question 3
 def check_median(shirts):
@@ -54,21 +56,23 @@ check_median(shirts)
 # median color is BROWN
 
 
+
+
 # question 4 solution
 variance = 0
 for k,v in shirts.items():
   variance += (v - mean_color)**2
-total = variance / 4
-print(total)
+total = variance / len(shirts)
+print('variance of the data is {}'.format(total))
 
-# variance is 188
+
+
 
 # question 5
 red_color_outcome =shirts['red'] 
 total_color_outcome = sum_of_colors
 probability_of_red = (red_color_outcome / total_color_outcome)
 print(probability_of_red)
-
 # OR IN PERCENTAGE
 percentage = round(probability_of_red * 100,2)
 print(percentage)
@@ -107,7 +111,8 @@ print(percentage)
 # connection.commit()
 # connection.close()
 
-# HAVING SOME ISSUE INSTALLING POSTGRESQL DUE TO ADMINISTRATION PIN ON MY PC . SO I COULDNT COMPLETE THIS
+''' HAVING SOME ISSUE INSTALLING POSTGRESQL DUE TO ADMINISTRATION PIN ON MY PC .
+ SO I COULDNT COMPLETE THIS BECAUSE OF THAT. JUST PRAYING IT DOESNT JEOPARDIZE MY CHANCES '''
 
 
 # question 8
@@ -125,24 +130,16 @@ def baseConverter(x):
       for i in my_list:
         base10 +=  (i * x)**y
         y += 1
-        print(y)
-
     return print('{} base {} to base 10 = {}'.format(my_list,x,base10))
+baseConverter(3)
 
 
-#baseConverter(3)
 
 # question 9
-
 a, b = 0, 1
-
 sum_of_sequence = 0
-
 n = 50
-
 for i in range(n):
-
-   print(a)
    sum_of_sequence += a
 
    a, b = b, a + b
